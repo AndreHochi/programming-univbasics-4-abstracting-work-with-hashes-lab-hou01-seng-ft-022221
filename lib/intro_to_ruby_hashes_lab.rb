@@ -1,5 +1,5 @@
 def my_hash_creator(key, value)
-  hash = {key: value}
+  hash = {key => value}
   hash
 end
 
@@ -10,8 +10,8 @@ end
 
 def update_counting_hash(hash, key)
   new_hash = hash
-  if !hash[key]
-    new_hash[key] = 1
-  else 
+  if hash[key]
     new_hash[key] = hash[key] + 1
+  else 
+    new_hash[key] = 1
 end
